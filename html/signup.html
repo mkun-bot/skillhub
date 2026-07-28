@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+   <link rel="icon" type="image/png" href="../images/S.png">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<style>
+    body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  /* background: linear-gradient(135deg, #121213, #6a00ff); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:linear-gradient(135deg,#0d0d0e,#181718);
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 450px;
+  background: #0a0a0a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(116, 13, 219, 0.4);
+}
+
+.panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+
+.left-panel {
+  left: 0;
+  background: #7B2FF7;
+  clip-path: polygon(0 0, 100% 0, 25% 100%, 0 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.right-panel {
+  right: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+input {
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #6a00ff;
+  background: transparent;
+  color: white;
+  font-size: 1em;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #6a00ff, #9b4dff);
+  color: rgb(240, 235, 235);
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #9b4dff, #6a00ff);
+}
+
+.switch {
+  text-align: center;
+  margin-top: 10px;
+  color: #9b4dff;
+}
+.h1{
+    /* font-size: medium; */
+    position: relative;
+    right: 40px;
+    top: -100px;
+}
+p{
+    font-size:small;
+    position: relative;
+    left: -40px;
+    top: -110px;
+}
+</style>
+<body>
+  <div class="container">
+    <div class="panel left-panel">
+      <h1 class="h1">WELCOME!</h1>
+      <p>Join us and start learning today.</p>
+    </div>
+    <div class="panel right-panel">
+      <form>
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+        <div class="switch">
+          Already have an account? <a href="login.html">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+  const signupForm = document.querySelector("form");
+
+  signupForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const username = signupForm.querySelector("input[type='text']").value.trim();
+    const email = signupForm.querySelector("input[type='email']").value.trim();
+    const password = signupForm.querySelector("input[type='password']").value.trim();
+
+    if (username === "" || email === "" || password === "") {
+      alert("⚠️ Please fill all fields.");
+    } else {
+      // Save user data in localStorage
+      localStorage.setItem("username", username);
+      localStorage.setItem("password", password);
+
+      alert("✅ Sign Up Successful! Now you can login.");
+      window.location.href = "login.html"; // redirect to login page
+    }
+  });
+</script>
+
+</body>
+</html>

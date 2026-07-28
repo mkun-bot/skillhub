@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SkillHub-Course Payments</title>
+   <link rel="icon" type="image/png" href="../images/S.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body{
+     background: #0d1b2a!important; 
+}
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ff0000;
+      min-height: 100vh;
+      padding-top: 100px; /* space for fixed navbar */
+    }
+
+    .container {
+      width: 1100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      padding: 40px;
+      margin: auto;
+    }
+
+    .course-box {
+      background: #0a0a0a;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 25px rgba(150, 0, 255, 0.4);
+      color: white;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .course-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .course-box h3 {
+      margin-bottom: 10px;
+      color: #9b4dff;
+    }
+
+    .course-box p {
+      color: #ccc;
+      font-size: 0.9em;
+    }
+
+    .price {
+      font-size: 1.4em;
+      color: #6a00ff;
+      margin: 15px 0;
+    }
+
+    .payment-btn {
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #7B2FF7, #F107A3);
+      color: white;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+    }
+
+    .payment-btn:hover {
+      background: linear-gradient(135deg, #9b4dff, #6a00ff);
+    }
+    .notes-section {
+  text-align: center;
+  color: white;
+  margin-top: 60px;
+}
+
+.notes-heading {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.notes-container {
+  width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: auto;
+}
+
+.note-box {
+  background: #0a0a0a;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 25px rgba(150, 0, 255, 0.4);
+  color: white;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.note-box:hover {
+  transform: translateY(-10px);
+}
+
+.note-box h3 {
+  color: #9b4dff;
+  margin-bottom: 10px;
+}
+
+.note-box p {
+  color: #ccc;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-weight: 600;
+  color: #6a00ff;
+  margin-bottom: 15px;
+}
+.pay-heading{
+    font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+.payment-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #7B2FF7, #F107A3);
+  color: white;
+  font-size: 1.1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.payment-btn:hover {
+  background: linear-gradient(135deg, #9b4dff, #6a00ff);
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Navbar (same structure as homepage) -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <h2>Skill<span>Hub</span></h2>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-btn">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="signup.html" class="signup-btn">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Payment Section -->
+<h1 class="pay-heading">Payment</h1>
+<div class="container">
+  <div class="course-box">
+    <h3>Web Development</h3>
+    <p>HTML, CSS, JavaScript, React, NodeJS</p>
+    <div class="price">$99</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+
+  <div class="course-box">
+    <h3>Python & AI</h3>
+    <p>Machine Learning, ChatGPT APIs</p>
+    <div class="price">$120</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+
+  <div class="course-box">
+    <h3>Graphic Designing</h3>
+    <p>Photoshop, Illustrator, Figma</p>
+    <div class="price">$85</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+
+  <div class="course-box">
+    <h3>Canva Designing</h3>
+    <p>Social Media Posts, Presentations</p>
+    <div class="price">$60</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+
+  <div class="course-box">
+    <h3>MS Office</h3>
+    <p>Word, Excel, PowerPoint, Outlook</p>
+    <div class="price">$50</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+
+  <div class="course-box">
+    <h3>Video Editing</h3>
+    <p>Premiere Pro, After Effects, CapCut</p>
+    <div class="price">$90</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+
+  <div class="course-box">
+    <h3>Cyber Security</h3>
+    <p>Ethical Hacking, Network Protection</p>
+    <div class="price">$130</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+
+  <div class="course-box">
+    <h3>Mobile App Development</h3>
+    <p>Flutter, React Native, Android Studio</p>
+    <div class="price">$110</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+
+  <div class="course-box">
+    <h3>Data Science</h3>
+    <p>Python, Pandas, NumPy, Visualization</p>
+    <div class="price">$125</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+
+  <div class="course-box">
+    <h3>Cloud Computing</h3>
+    <p>AWS, Microsoft Azure, Google Cloud Basics</p>
+    <div class="price">$140</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+
+  <div class="course-box">
+    <h3>Blockchain Development</h3>
+    <p>Smart Contracts, Ethereum, Decentralized Apps</p>
+    <div class="price">$150</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+
+  <div class="course-box">
+    <h3>Entrepreneurship</h3>
+    <p>Business Planning, Branding, Startup Growth</p>
+    <div class="price">$100</div>
+    <a href="../html/paynow.html" class="payment-btn"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
+  </div>
+</div>
+
+  <div class="container">
+  <!-- All course payment boxes -->
+</div>
+<!-- Notes Section -->
+<a href="help.html" class="help-btn">?</a>
+      <footer>
+    <p>© 2026 SkillHub. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

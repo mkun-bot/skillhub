@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillHub - FAQs</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ff0000;
+      color: white;
+      padding-top: 100px;
+    }
+
+    .faq-section {
+      width: 800px;
+      margin: auto;
+      background: #0a0a0a;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(150, 0, 255, 0.4);
+      padding: 40px;
+    }
+
+    .faq-section h2 {
+      color: #9b4dff;
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item h3 {
+      color: #9b4dff;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      color: #ccc;
+      display: none;
+      margin: 0;
+    }
+
+    .faq-item.active p {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h2>Skill<span>Hub</span></h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+      <div class="nav-btn">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="signup.html" class="signup-btn">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= FAQ SECTION ================= -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>How can I enroll in a course?</h3>
+      <p>Click on the "Enroll Now" button under your desired course. You will be redirected to the payment page.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What payment methods are supported?</h3>
+      <p>We support PayPal, Credit/Debit Cards, and local options like JazzCash/EasyPaisa.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I access courses after payment?</h3>
+      <p>Yes, once payment is confirmed, you will get instant access to your selected course.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you provide certificates?</h3>
+      <p>Yes, after completing a course, you will receive a SkillHub certificate.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How can I contact support?</h3>
+      <p>You can use the "Email Support" link or the contact form on the Help page.</p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 SkillHub. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle FAQ answers
+    document.querySelectorAll('.faq-item h3').forEach(item => {
+      item.addEventListener('click', () => {
+        item.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillHub - PayPal Payment</title>
+  <style>
+    body{
+     background: #0d1b2a!important; 
+}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ff0000;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .box {
+      width: 500px;
+      margin: auto;
+      background: #0a0a0a;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(150, 0, 255, 0.4);
+      padding: 40px;
+    }
+    input {
+      width: 80%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background: #222;
+      color: white;
+    }
+    button {
+      padding: 12px 25px;
+      border-radius: 25px;
+      border: none;
+      background: linear-gradient(135deg, #7B2FF7, #F107A3);
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(135deg, #9b4dff, #6a00ff);
+    }
+    .loading {
+      display: none;
+      margin-top: 20px;
+      color: #9b4dff;
+      font-weight: bold;
+    }
+    .success {
+      color: #00ff88;
+      display: none;
+      margin-top: 20px;
+    }
+    .error {
+      color: #ff4444;
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>PayPal Payment</h2>
+    <p>Login to your PayPal account to complete payment.</p>
+    <input type="email" id="email" placeholder="PayPal Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="processPayment()">Login & Pay</button>
+
+    <p id="loading" class="loading">🔄 Processing Payment...</p>
+    <p id="successMsg" class="success">✅ Payment Successful via PayPal!</p>
+    <p id="errorMsg" class="error">⚠️ Please enter your email and password first.</p>
+  </div>
+
+  <script>
+    function processPayment() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const loading = document.getElementById('loading');
+      const successMsg = document.getElementById('successMsg');
+      const errorMsg = document.getElementById('errorMsg');
+
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      loading.style.display = 'none';
+
+      if (email === "" || password === "") {
+        errorMsg.style.display = 'block';
+        return;
+      }
+
+      // Show loading animation
+      loading.style.display = 'block';
+
+      // Simulate payment processing delay
+      setTimeout(() => {
+        loading.style.display = 'none';
+        successMsg.style.display = 'block';
+      }, 3000); // 3 seconds delay
+    }
+  </script>
+</body>
+</html>

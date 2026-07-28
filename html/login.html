@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SkillHub-Login</title>
+   <link rel="icon" type="image/png" href="../images/S.png">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+    body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background:linear-gradient(135deg,#151516,#181718);
+  /* background:linear-gradient(135deg,#7B2FF7,#F107A3); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 900px;
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(150, 0, 255, 0.4);
+  background: linear-gradient(135deg, #0a0a0a 50%, #6a00ff 50%);
+}
+
+
+.panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+
+.left-panel {
+  left: 0;
+  background: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-panel {
+  right: 0;
+  background: linear-gradient(135deg, #6a00ff, #9b4dff);
+  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.right-panel {
+  right: 0;
+  background: linear-gradient(135deg, #6a00ff, #9b4dff);
+  clip-path: polygon(70% 0, 100% 0, 100% 100%, 0 100%);
+}
+.container {
+  position: relative;
+  width: 900px;
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(150, 0, 255, 0.4);
+  background: #0a0a0a;
+}
+form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.input-box {
+  position: relative;
+  margin: 10px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 35px 12px 10px;
+  border: none;
+  border-bottom: 2px solid #6a00ff;
+  background: transparent;
+  color: white;
+  font-size: 1em;
+}
+
+.input-box i {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  color: #6a00ff;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #6a00ff, #9b4dff);
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #9b4dff, #6a00ff);
+}
+
+.switch {
+  text-align: center;
+  margin-top: 10px;
+  color: #9b4dff;
+}
+
+.switch a {
+  color: #9b4dff;
+  text-decoration: none;
+}
+.h1{
+
+  position: relative;
+  bottom: -50px;
+  left: 80px;
+
+}
+.p{
+  font-size:medium;
+   position: relative;
+  bottom: -70px;
+  left: 60px;
+}
+</style>
+<body>
+  <div class="container">
+    <div class="panel left-panel">
+      <form>
+        <h2>Login</h2>
+        <div class="input-box">
+          <input type="text" placeholder="Username" required>
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" required>
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <button type="submit">Login</button>
+        <div class="switch">
+          Don’t have an account? <a href="signup.html">Sign Up</a>
+        </div>
+      </form>
+    </div>
+    <div class="panel right-panel">
+      <h1 class="h1">WELCOME BACK!</h1>
+      <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+    </div>
+  </div>
+  <script>
+  const loginForm = document.querySelector("form");
+
+  loginForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const username = loginForm.querySelector("input[type='text']").value.trim();
+    const password = loginForm.querySelector("input[type='password']").value.trim();
+
+    const savedUser = localStorage.getItem("username");
+    const savedPass = localStorage.getItem("password");
+
+    if (username === "" || password === "") {
+      alert("⚠️ Please enter both username and password.");
+    } else if (username === savedUser && password === savedPass) {
+      alert("✅ Login Successful! Welcome " + username);
+      window.location.href = "index.html"; // redirect to home page
+    } else {
+      alert("❌ Invalid credentials. Please Sign Up first.");
+      window.location.href = "signup.html"; // redirect to signup page
+    }
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillHub - Help</title>
+   <link rel="icon" type="image/png" href="../images/S.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ff0000;
+      color: white;
+      padding-top: 100px;
+    }
+
+    .help-section {
+      width: 800px;
+      margin: auto;
+      background: #0a0a0a;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(150, 0, 255, 0.4);
+      padding: 40px;
+      text-align: center;
+    }
+
+    .help-section h2 {
+      color: #9b4dff;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .help-section p {
+      color: #ccc;
+      font-size: 1em;
+      margin-bottom: 25px;
+    }
+
+    .help-box {
+      background: #111;
+      border-radius: 12px;
+      padding: 25px;
+      margin-top: 30px;
+      box-shadow: 0 0 20px rgba(150, 0, 255, 0.3);
+    }
+
+    .help-box h3 {
+      color: #9b4dff;
+      margin-bottom: 10px;
+    }
+
+    .help-box p {
+      color: #bbb;
+      font-size: 0.95em;
+    }
+
+    .help-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7B2FF7, #F107A3);
+      color: white;
+      font-size: 1.5em;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(150, 0, 255, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .help-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .contact-links {
+      margin-top: 30px;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #6a00ff, #9b4dff);
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .contact-links a:hover {
+      background: linear-gradient(135deg, #9b4dff, #6a00ff);
+    }
+    .help-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7B2FF7, #F107A3);
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(150, 0, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+.help-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.help-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(150, 0, 255, 0.6);
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h2>Skill<span>Hub</span></h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../html/index.html">Home</a></li>
+        <li><a href="../html/courses.html">Courses</a></li>
+        <li><a href="../html/notes.html">Notes</a></li>
+        <li><a href="../html/about.html">About</a></li>
+        <li><a href="../html/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-btn">
+        <a href="../html/login.html" class="login-btn">Login</a>
+        <a href="../html/signup.html" class="signup-btn">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= HELP SECTION ================= -->
+  <section class="help-section">
+    <h2>Need Help?</h2>
+    <p>If you have any questions or face issues while using SkillHub, we’re here to assist you.  
+    You can reach out to our support team or check FAQs for quick answers.</p>
+
+    <div class="contact-links">
+      <a href="mailto:alihassantariq123456@gmail.com">Email Support</a>
+      <a href="contact.html">Contact Form</a>
+      <a href="faq.html">FAQs</a>
+    </div>
+
+    <!-- New Help Box -->
+    <div class="help-box">
+      <h3>Quick Support</h3>
+      <p>Need instant help? Click the button below to chat with our support assistant or get step-by-step guidance.</p>
+      <a href="chat.html" class="contact-links">Start Chat</a>
+    </div>
+  </section>
+
+  <!-- Floating Help Button -->
+  <a href="help.html" class="help-btn">?</a>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 SkillHub. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

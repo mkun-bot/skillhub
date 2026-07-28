@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillHub - Notes</title>
+ <link rel="icon" type="image/png" href="../images/S.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a0033, #6a00ff);
+      padding-top: 100px; /* space for fixed navbar */
+      color: white;
+    }
+
+    /* Notes Section */
+    .note {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .note h2 {
+      font-size: 2.8em;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #ff00ff;
+    }
+
+    .note-container {
+      width: 1100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: auto;
+    }
+
+    .note-box {
+      background: #0a0a0a;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 25px rgba(150, 0, 255, 0.4);
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .note-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .note-box h3 {
+      color: #9b4dff;
+      margin-bottom: 10px;
+    }
+
+    .note-box p {
+      color: #ccc;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-weight: 600;
+      color: #6a00ff;
+      margin-bottom: 15px;
+    }
+
+    .buy-btn {
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #7B2FF7, #F107A3);
+      color: white;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+    }
+
+    .buy-btn:hover {
+      background: linear-gradient(135deg, #9b4dff, #6a00ff);
+    }
+
+    /* Notes Payment Section */
+    .notes-payment {
+      background: #0a0a0a;
+      color: white;
+      padding: 40px;
+      margin-top: 60px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(150, 0, 255, 0.4);
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .notes-payment h2 {
+      color: #9b4dff;
+      margin-bottom: 20px;
+    }
+
+    .notes-payment form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .notes-payment input,
+    .notes-payment select {
+      padding: 12px;
+      border: none;
+      border-bottom: 2px solid #6a00ff;
+      background: transparent;
+      color: white;
+    }
+
+    .notes-payment button {
+      margin-top: 20px;
+    }
+    .help-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7B2FF7, #F107A3);
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(150, 0, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.help-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(150, 0, 255, 0.6);
+}
+.help-btn {
+  text-decoration: none; /* removes underline */
+}
+ .pay-btn {
+      margin-top: 25px;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #7B2FF7, #F107A3);
+      color: white;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .pay-btn:hover {
+      background: linear-gradient(135deg, #9b4dff, #6a00ff);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h2>Skill<span>Hub</span></h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="notes.html" class="active">Notes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-btn">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="signup.html" class="signup-btn">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= NOTES PAGE ================= -->
+  <section class="note">
+    <h2>Notes</h2>
+    <div class="note-container">
+      <!-- 12 Notes Boxes -->
+      <div class="note-box"><h3>Web Development Notes</h3><p>Complete HTML, CSS, JS notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+      <div class="note-box"><h3>Python & AI Notes</h3><p>Python basics, ML, AI notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+      <div class="note-box"><h3>Graphic Designing Notes</h3><p>Photoshop, Illustrator, Figma notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+      <div class="note-box"><h3>MS Office Notes</h3><p>Word, Excel, PowerPoint notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+      <div class="note-box"><h3>Video Editing Notes</h3><p>Premiere Pro, After Effects notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+      <div class="note-box"><h3>Cyber Security Notes</h3><p>Ethical hacking, security notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+      <div class="note-box"><h3>Mobile App Notes</h3><p>Flutter, React Native notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+      <div class="note-box"><h3>Data Science Notes</h3><p>Pandas, NumPy, ML notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+      <div class="note-box"><h3>Cloud Computing Notes</h3><p>AWS, Azure, GCP notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+      <div class="note-box"><h3>Blockchain Notes</h3><p>Ethereum, Smart Contracts notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+      <div class="note-box"><h3>Entrepreneurship Notes</h3><p>Business, startup growth notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+      <div class="note-box"><h3>Canva Notes</h3><p>Social media design notes</p><p class="price">1000 PKR</p><a href="#notes-payment"><button class="buy-btn">Buy Now</button></a></div>
+    </div>
+  </section>
+
+  <!-- ================= NOTES PAYMENT SECTION ================= -->
+  <section id="notes-payment" class="notes-payment">
+    <h2>Complete Your Notes Purchase</h2>
+    <form>
+      <label>Full Name</label>
+      <input type="text" required>
+      
+      <label>Email</label>
+      <input type="email" required>
+      
+      <label>Payment Method</label>
+      <select>
+        <option>PayPal</option>
+        <option>Credit Card</option>
+        <option>JazzCash / EasyPaisa</option>
+      </select>
+      
+      <button type="submit" class="pay-btn">Proceed to Pay</button>
+    </form>
+   <a href="help.html" class="help-btn">?</a>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 SkillHub. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
